@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # WebApp boilerplate with React JS and Flask API
 
 Build web applications using React.js for the front end and python/flask for your backend API.
@@ -79,3 +80,7 @@ This boilerplate it's 100% read to deploy with Render.com and Heroku in a matter
 This template was built as part of the 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors. Find out more about our [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
 
 You can find other templates and resources like this at the [school github page](https://github.com/4geeksacademy/).
+=======
+# health-booking-app
+Reserva Salud App is a web application designed to manage appointment reservations with specialists in the health area. The project was developed under the agile SCRUM methodology, in collaboration with the study team, promoting the organization and incremental delivery of functionalities.
+>>>>>>> 68e5d941bfb79954039121f0e2a2e45579292aee
