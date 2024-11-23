@@ -1,86 +1,52 @@
-<<<<<<< HEAD
-# WebApp boilerplate with React JS and Flask API
+# Health Booking App
 
-Build web applications using React.js for the front end and python/flask for your backend API.
+## Description
+**Health Booking App** is a web platform designed to speed up and simplify the search and booking of appointments with health specialists. With intuitive filters, patients can locate professionals in their area and easily schedule appointments. This project was developed as the final project of our bootcamp, highlighting the collaborative effort and the skills acquired.
 
-- Documentation can be found here: https://start.4geeksacademy.com/starters/react-flask
-- Here is a video on [how to use this template](https://www.loom.com/share/f37c6838b3f1496c95111e515e83dd9b)
-- Integrated with Pipenv for package managing.
-- Fast deployment to heroku [in just a few steps here](https://start.4geeksacademy.com/backend/deploy-heroku-posgres).
-- Use of .env file.
-- SQLAlchemy integration for database abstraction.
+---
 
-### 1) Installation:
+## Featured Features
 
-> If you use Github Codespaces (recommended) or Gitpod this template will already come with Python, Node and the Posgres Database installed. If you are working locally make sure to install Python 3.10, Node 
+### 1. Integrated APIs
+- **Custom API**: Developed to efficiently manage the internal functioning of the platform.
+- **Cloudinary**: Manages the upload and storage of images of patients and health professionals.
+- **Payment Market(MP)**: Manage reservation payments and refunds in case of cancellations, either by the professional or the patient.
 
-It is recomended to install the backend first, make sure you have Python 3.8, Pipenv and a database engine (Posgress recomended)
+### 2. Security
+- **JWT Authentication**: Allows you to validate the user session and guarantee its validity. Without a valid token, no management can be done on the platform.
+- **Password encryption**: User passwords are stored securely to protect your personal information.
 
-1. Install the python packages: `$ pipenv install`
-2. Create a .env file based on the .env.example: `$ cp .env.example .env`
-3. Install your database engine and create your database, depending on your database you have to create a DATABASE_URL variable with one of the possible values, make sure you replace the valudes with your database information:
+### 3. Additional Features
+- **Service rating**: Patients can rate the professionals. Those with the best scores are highlighted in a special carousel.
+- **Agenda Management**: Professionals can schedule their daily agenda or plan it up to 60 days in the future.
 
-| Engine    | DATABASE_URL                                        |
-| --------- | --------------------------------------------------- |
-| SQLite    | sqlite:////test.db                                  |
-| MySQL     | mysql://username:password@localhost:port/example    |
-| Postgress | postgres://username:password@localhost:5432/example |
+---
 
-4. Migrate the migrations: `$ pipenv run migrate` (skip if you have not made changes to the models on the `./src/api/models.py`)
-5. Run the migrations: `$ pipenv run upgrade`
-6. Run the application: `$ pipenv run start`
+## Technologies Used
 
-> Note: Codespaces users can connect to psql by typing: `psql -h localhost -U gitpod example`
+### Frontend
+[![HTML](https://img.shields.io/badge/HTML-blue)](https://es.wikipedia.org/wiki/HTML)
+[![CSS](https://img.shields.io/badge/CSS-blue)](https://es.wikipedia.org/wiki/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-yellow)](https://es.wikipedia.org/wiki/JavaScript)
+[![React](https://img.shields.io/badge/React-red)](https://es.wikipedia.org/wiki/React)
+[![Tailwind](https://img.shields.io/badge/Tailwind-blue)](https://es.wikipedia.org/wiki/Tailwind_CSS)
+[![Daisyui](https://img.shields.io/badge/daisyui-blue)](https://daisyui.com/)
+[![Figma](https://img.shields.io/badge/Figma-red)](https://es.wikipedia.org/wiki/Figma)
+[![Axios](https://img.shields.io/badge/Axios-green)](https://www.npmjs.com/package/axios)
+[![Badge Formik](https://img.shields.io/badge/Formik-red)](https://choosealicense.com/licenses/mit/)
 
-### Undo a migration
+### Backend
+[![NodeJS](https://img.shields.io/badge/NodeJS-green)](https://es.wikipedia.org/wiki/Node.js)
+[![Python](https://img.shields.io/badge/Python-violet)](https://es.wikipedia.org/wiki/Python)
+[![Flask](https://img.shields.io/badge/Flask-black)](https://es.wikipedia.org/wiki/Flask)
+[![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-red)](https://es.wikipedia.org/wiki/SQLAlchemy)
+[![JWT](https://img.shields.io/badge/JWT-black)](https://jwt.io/)
+[![MP](https://img.shields.io/badge/MercadoPago-blue)](https://www.mercadopago.com.uy/)
+[![Cloudinary](https://img.shields.io/badge/Cloudinary-blue)](https://cloudinary.com/)
+[![Flask-mail ](https://img.shields.io/badge/Flask-mail-blue?labelColor=black)](https://flask-mail.readthedocs.io/en/latest/)
 
-You are also able to undo a migration by running
+---
 
-```sh
-$ pipenv run downgrade
-```
-
-### Backend Populate Table Users
-
-To insert test users in the database execute the following command:
-
-```sh
-$ flask insert-test-users 5
-```
-
-And you will see the following message:
-
-```
-  Creating test users
-  test_user1@test.com created.
-  test_user2@test.com created.
-  test_user3@test.com created.
-  test_user4@test.com created.
-  test_user5@test.com created.
-  Users created successfully!
-```
-
-### **Important note for the database and the data inside it**
-
-Every Github codespace environment will have **its own database**, so if you're working with more people eveyone will have a different database and different records inside it. This data **will be lost**, so don't spend too much time manually creating records for testing, instead, you can automate adding records to your database by editing ```commands.py``` file inside ```/src/api``` folder. Edit line 32 function ```insert_test_data``` to insert the data according to your model (use the function ```insert_test_users``` above as an example). Then, all you need to do is run ```pipenv run insert-test-data```.
-
-### Front-End Manual Installation:
-
--   Make sure you are using node version 14+ and that you have already successfully installed and runned the backend.
-
-1. Install the packages: `$ npm install`
-2. Start coding! start the webpack dev server `$ npm run start`
-
-## Publish your website!
-
-This boilerplate it's 100% read to deploy with Render.com and Heroku in a matter of minutes. Please read the [official documentation about it](https://start.4geeksacademy.com/deploy).
-
-### Contributors
-
-This template was built as part of the 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors. Find out more about our [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
-
-You can find other templates and resources like this at the [school github page](https://github.com/4geeksacademy/).
-=======
-# health-booking-app
-Reserva Salud App is a web application designed to manage appointment reservations with specialists in the health area. The project was developed under the agile SCRUM methodology, in collaboration with the study team, promoting the organization and incremental delivery of functionalities.
->>>>>>> 68e5d941bfb79954039121f0e2a2e45579292aee
+## Test the Application
+Discover how our app works through the following link: [Demo Link](#).  
+Register and start enjoying the service!
